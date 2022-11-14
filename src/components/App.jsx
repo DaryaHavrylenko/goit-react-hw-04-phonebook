@@ -36,9 +36,9 @@ export const App = () => {
   };
 
   const deleteContacts = contactId => {
-    setContacts(() => ({
-      newContacts: contacts.filter(el => el.id !== contactId),
-    }));
+    setContacts(contacts => {
+      return contacts.filter(el => el.id !== contactId);
+    });
   };
 
   const changeFilter = e => {
@@ -62,6 +62,7 @@ export const App = () => {
       setContacts([...savedContacts]);
     }
   }, []);
+
   useEffect(() => {
     if (!isFirstRender.current) {
       window.localStorage.setItem('contacts', JSON.stringify(contacts));
