@@ -5,6 +5,7 @@ const List = styled.ul`
     display: flex;
     flex-direction: column;
     list-style-type: square;
+    padding: 5px;
 `
 const Item = styled.li`
    display: flex; 
@@ -14,6 +15,7 @@ const Text = styled.p`
         font-size: ${p => p.theme.fontSizes.l};
          font-weight: ${p => p.theme.fontWeights.list};
          text-transform: capitalize;
+         color: #d8ddb3;
       
 `
 const Button = styled.button`
@@ -28,8 +30,9 @@ text-align: center;
     border: ${p => p.theme.borders.normal};
   background-color: ${p => p.theme.colors.white};
   border-radius: ${p => p.theme.radii.md};
+  border: transparent;
   &:hover {
-    background-color: #b3f9f6;
+    background-color: #de6515;
     border-color: #b3f9f6;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);

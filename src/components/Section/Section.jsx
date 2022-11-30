@@ -18,6 +18,9 @@ const FormChildren = styled.div`
 `
 const Caption = styled.h1`
     font-size: ${p => p.theme.fontSizes.xl};
+    display: flex;
+    justify-content: center;
+    color: #e1d80d;
 `
 export const Section = ({title, children}) => {
     return (

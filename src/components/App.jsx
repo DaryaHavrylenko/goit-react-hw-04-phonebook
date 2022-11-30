@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import {Container} from './Container.styled';
 import { Section } from './Section/Section';
 import { Form } from './Form/Form';
 import { ContactsWrapper } from './Contacts/ContactsWrapper';
@@ -7,6 +8,7 @@ import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './ThemeProvider/theme';
+
 
 const defaultContacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -71,7 +73,7 @@ export const App = () => {
     isFirstRender.current = false;
   }, [contacts]);
   return (
-    <>
+    <Container>
       <ThemeProvider theme={theme}>
         <Section title="Phonebook">
           <Form onSubmit={handleSubmit} />
@@ -85,7 +87,8 @@ export const App = () => {
             onDeleteContacts={deleteContacts}
           ></Contacts>
         </ContactsWrapper>
+
       </ThemeProvider>
-    </>
+    </Container>
   );
 };

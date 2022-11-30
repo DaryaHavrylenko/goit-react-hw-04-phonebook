@@ -16,13 +16,17 @@ const Caption = styled.h2`
   font-size: ${p => p.theme.fontSizes.l};
   display: flex;
   flex-direction: column;
+  align-items:center;
+  color: #e1d80d;
 `;
-
+const Find = styled.div`
+color: whitesmoke;
+`
 export const ContactsWrapper = ({ title, children }) => {
   return (
     <Section>
       {title && <Caption>{title}</Caption>}
-      <div>{children}</div>
+      <Find>{children}</Find>
     </Section>
   );
 };
